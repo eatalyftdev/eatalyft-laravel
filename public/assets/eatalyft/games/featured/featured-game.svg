@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" aria-label="Featured game placeholder">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F4F4F5"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="14" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Card -->
+    <rect x="50" y="40" width="500" height="320" fill="url(#cardGrad)" stroke="#E4E4E7" stroke-width="2" rx="24"/>
+    <!-- Game artwork area -->
+    <rect x="70" y="60" width="460" height="180" fill="#D1D5DB" rx="16"/>
+    <circle cx="200" cy="150" r="40" fill="#DC2626" opacity="0.3"/>
+    <circle cx="400" cy="150" r="32" fill="#EF4444" opacity="0.2"/>
+    <!-- Play button -->
+    <circle cx="300" cy="150" r="30" fill="#DC2626"/>
+    <path d="M288 140 L316 150 L288 160" fill="#FFFFFF"/>
+    <!-- Title -->
+    <text x="70" y="280" font-family="system-ui" font-size="18" font-weight="800" fill="#1F2933">Featured Game</text>
+    <text x="70" y="304" font-family="system-ui" font-size="14" fill="#52525B">Casual puzzle game</text>
+    <!-- Rating -->
+    <g fill="#DC2626">
+      <path d="M70 324 l4 4 l10 -10" stroke="#DC2626" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M90 324 l4 4 l10 -10" stroke="#DC2626" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M110 324 l4 4 l10 -10" stroke="#DC2626" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M130 324 l4 4 l10 -10" stroke="#DC2626" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M150 324 l4 4 l10 -10" stroke="#DC2626" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="170" y="328" font-family="system-ui" font-size="12" fill="#52525B">4.8 &bull; 12K players</text>
+  </g>
+</svg>

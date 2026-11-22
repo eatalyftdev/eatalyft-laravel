@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" aria-label="Travel banner placeholder">
+  <defs>
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="50%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bannerGrad)"/>
+  <!-- Decorative elements -->
+  <circle cx="1100" cy="80" r="100" fill="#FFFFFF" opacity="0.15"/>
+  <circle cx="100" cy="320" r="120" fill="#FFFFFF" opacity="0.1"/>
+  <path d="M0 100 Q600 -50 1200 100 Q600 450 0 450 Z" fill="#FFFFFF" opacity="0.08"/>
+  <!-- Text placeholder area -->
+  <rect x="100" y="160" width="400" height="2" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="100" y="220" width="200" height="2" fill="#FFFFFF" opacity="0.4"/>
+  <rect x="100" y="280" width="120" height="2" fill="#FFFFFF" opacity="0.4"/>
+</svg>

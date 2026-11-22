@@ -2,18 +2,32 @@
 
 namespace Tests\Feature;
 
-// use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     */
+    use RefreshDatabase;
+
     public function test_the_application_returns_a_successful_response(): void
     {
         $response = $this->get('/');
 
         $response->assertStatus(200);
+        $response->assertViewIs('public.home');
+    }
+
+    public function test_health_endpoint_returns_success(): void
+    {
+        $response = $this->get('/health');
+
+        $response->assertStatus(200);
+        $response->assertJsonStructure([
+            'status',
+            'timestamp',
+            'version',
+            'environment',
+            'checks',
+        ]);
     }
 }

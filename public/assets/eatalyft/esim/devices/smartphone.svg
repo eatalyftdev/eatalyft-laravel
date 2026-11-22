@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" aria-label="Smartphone placeholder">
+  <defs>
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F2933"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="20" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Phone body -->
+    <rect x="140" y="60" width="120" height="480" fill="url(#phoneGrad)" rx="32"/>
+    <!-- Screen -->
+    <rect x="152" y="72" width="96" height="456" fill="#F3F4F6" rx="24"/>
+    <!-- Screen content -->
+    <rect x="168" y="120" width="64" height="8" fill="#E5E7EB" rx="4"/>
+    <rect x="168" y="136" width="48" height="8" fill="#E5E7EB" rx="4"/>
+    <circle cx="200" cy="160" r="14" fill="#DC2626"/>
+    <rect x="168" y="190" width="80" height="8" fill="#E5E7EB" rx="4"/>
+    <rect x="168" y="206" width="56" height="8" fill="#E5E7EB" rx="4"/>
+    <rect x="168" y="222" width="72" height="8" fill="#E5E7EB" rx="4"/>
+    <text x="200" y="260" font-family="system-ui" font-size="12" fill="#52525B" text-anchor="middle">eSIM ACTIVE</text>
+    <!-- Home bar -->
+    <rect x="188" y="544" width="24" height="6" fill="#9CA3AF" rx="3"/>
+  </g>
+</svg>

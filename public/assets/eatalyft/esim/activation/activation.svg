@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" aria-label="eSIM activation placeholder">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0E7FF"/>
+      <stop offset="100%" stop-color="#C7D2FE"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+  <!-- Decorative dots -->
+  <circle cx="540" cy="80" r="24" fill="#DC2626" opacity="0.15"/>
+  <circle cx="60" cy="340" r="32" fill="#DC2626" opacity="0.1"/>
+  <!-- Phone -->
+  <rect x="240" y="100" width="120" height="240" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="2" rx="24" filter="url(#shadow)"/>
+  <rect x="252" y="112" width="96" height="216" fill="#F3F4F6" rx="20"/>
+  <!-- Activation animation -->
+  <circle cx="300" cy="200" r="34" fill="#DC2626" opacity="0.2"/>
+  <circle cx="300" cy="200" r="20" fill="#DC2626"/>
+  <rect x="278" y="190" width="44" height="20" fill="#FFFFFF" rx="10"/>
+  <text x="300" y="204" font-family="system-ui" font-size="11" font-weight="700" fill="#DC2626" text-anchor="middle">ACTIVE</text>
+  <!-- Signal waves -->
+  <path d="M300 260 Q320 240 300 220" stroke="#DC2626" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M300 260 Q280 240 300 220" stroke="#DC2626" stroke-width="3" fill="none" opacity="0.6"/>
+  <!-- Label -->
+  <text x="300" y="370" font-family="system-ui" font-size="14" font-weight="700" fill="#1F2933" text-anchor="middle">eSIM Activated</text>
+  <text x="300" y="388" font-family="system-ui" font-size="12" fill="#52525B" text-anchor="middle">Data connectivity ready</text>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
+      <feOffset dx="0" dy="16" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+</svg>

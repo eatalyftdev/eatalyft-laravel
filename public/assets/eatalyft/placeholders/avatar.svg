@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" aria-label="User avatar placeholder">
+  <defs>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5F5F4"/>
+      <stop offset="100%" stop-color="#E7E5E4"/>
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3F3F46"/>
+      <stop offset="100%" stop-color="#27272A"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="75" cy="75" r="70" fill="#F4F4F5"/>
+  <!-- Shirt -->
+  <path d="M30 110 Q75 90 120 110 L120 150 L30 150 Z" fill="url(#shirtGrad)"/>
+  <!-- Neck -->
+  <path d="M55 90 Q75 95 95 90 L95 110 L55 110 Z" fill="#F5F5F4"/>
+  <!-- Face -->
+  <ellipse cx="75" cy="70" rx="32" ry="38" fill="url(#skinGrad)"/>
+  <!-- Hair -->
+  <path d="M45 40 Q75 30 105 40 Q110 55 105 75 Q75 85 45 75 Q40 55 45 40 Z" fill="url(#hairGrad)"/>
+  <!-- Eyes -->
+  <circle cx="62" cy="65" r="2.5" fill="#1F2933"/>
+  <circle cx="88" cy="65" r="2.5" fill="#1F2933"/>
+  <!-- Mouth -->
+  <path d="M68 80 Q75 83 82 80" stroke="#3F3F46" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

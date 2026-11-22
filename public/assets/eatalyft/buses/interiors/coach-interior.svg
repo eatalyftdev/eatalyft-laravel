@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" aria-label="Coach interior placeholder">
+  <defs>
+    <linearGradient id="winGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0E7FF"/>
+      <stop offset="100%" stop-color="#C7D2FE"/>
+    </linearGradient>
+    <linearGradient id="seatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5F5F4"/>
+      <stop offset="100%" stop-color="#E7E5E4"/>
+    </linearGradient>
+  </defs>
+  <!-- Window background -->
+  <rect width="800" height="120" fill="url(#winGrad)"/>
+  <!-- Interior floor -->
+  <rect y="120" width="800" height="330" fill="#F4F4F5"/>
+  <!-- Seats row 1 -->
+  <g>
+    <rect x="60" y="180" width="100" height="100" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="200" y="180" width="100" height="100" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="340" y="180" width="100" height="100" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="480" y="180" width="100" height="100" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="620" y="180" width="100" height="100" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+  </g>
+  <!-- Seats row 2 -->
+  <g>
+    <rect x="60" y="290" width="100" height="100" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="200" y="290" width="100" height="100" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="340" y="290" width="100" height="100" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="480" y="290" width="100" height="100" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="620" y="290" width="100" height="100" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+  </g>
+  <!-- Aisle -->
+  <rect x="310" y="180" width="30" height="210" fill="#E4E4E7"/>
+  <!-- Headrests -->
+  <g fill="#DC2626">
+    <rect x="95" y="180" width="30" height="20" rx="4"/>
+    <rect x="235" y="180" width="30" height="20" rx="4"/>
+    <rect x="375" y="180" width="30" height="20" rx="4"/>
+    <rect x="515" y="180" width="30" height="20" rx="4"/>
+    <rect x="655" y="180" width="30" height="20" rx="4"/>
+    <rect x="95" y="290" width="30" height="20" rx="4"/>
+    <rect x="235" y="290" width="30" height="20" rx="4"/>
+    <rect x="375" y="290" width="30" height="20" rx="4"/>
+    <rect x="515" y="290" width="30" height="20" rx="4"/>
+    <rect x="655" y="290" width="30" height="20" rx="4"/>
+  </g>
+  <!-- Overhead rack -->
+  <rect x="40" y="140" width="720" height="20" fill="#D1D5DB" rx="4"/>
+</svg>

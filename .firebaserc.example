@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "development": "REPLACE_WITH_EATALYFT_DEV_PROJECT_ID",
+    "staging": "REPLACE_WITH_EATALYFT_STAGING_PROJECT_ID",
+    "production": "REPLACE_WITH_EATALYFT_PRODUCTION_PROJECT_ID"
+  }
+}

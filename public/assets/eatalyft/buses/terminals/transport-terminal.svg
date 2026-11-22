@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" aria-label="Transport terminal placeholder">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0E7FF"/>
+      <stop offset="100%" stop-color="#C7D2FE"/>
+    </linearGradient>
+    <linearGradient id="buildingGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F3F4F6"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="800" height="200" fill="url(#skyGrad)"/>
+  <circle cx="720" cy="60" r="24" fill="#FCD34D" opacity="0.9"/>
+  <!-- Terminal building -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="160" width="680" height="200" fill="url(#buildingGrad)" stroke="#D1D5DB" stroke-width="2"/>
+    <!-- Main entrance -->
+    <rect x="330" y="220" width="140" height="140" fill="#F3F4F6" stroke="#DC2626" stroke-width="3" rx="8"/>
+    <path d="M330 220 Q400 180 470 220" stroke="#DC2626" stroke-width="4" fill="none"/>
+    <!-- Windows -->
+    <rect x="90" y="180" width="60" height="80" fill="#E5E7EB" rx="4"/>
+    <rect x="170" y="180" width="60" height="80" fill="#E5E7EB" rx="4"/>
+    <rect x="570" y="180" width="60" height="80" fill="#E5E7EB" rx="4"/>
+    <rect x="650" y="180" width="60" height="80" fill="#E5E7EB" rx="4"/>
+    <!-- Ticket counter windows -->
+    <rect x="110" y="260" width="100" height="40" fill="#DC2626" rx="4"/>
+    <rect x="590" y="260" width="100" height="40" fill="#DC2626" rx="4"/>
+    <!-- Sign -->
+    <rect x="350" y="150" width="100" height="20" fill="#DC2626" rx="4"/>
+    <text x="400" y="164" font-family="system-ui" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">EATA<span style="background:#DC2626;padding:0 2px;border-radius:2px;">LYFT</span></text>
+  </g>
+  <!-- Foreground road -->
+  <rect y="360" width="800" height="90" fill="#6B7280"/>
+  <line x1="0" y1="360" x2="800" y2="360" stroke="#FFFFFF" stroke-width="4"/>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="14" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+</svg>

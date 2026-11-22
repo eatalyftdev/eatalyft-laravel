@@ -1,0 +1,262 @@
+/* ==========================================================================
+   EataLyft Design Token Bridge — Canonical Design System Layer
+   
+   Provides shared CSS custom properties consumed by both public (marketing)
+   and authenticated (admin) Blade layouts. Maps Bootstrap 5 / Sneat Pro
+   variables and Studio design tokens to a single coherent token set.
+   
+   Do not introduce raw hex values in components; reference these tokens.
+   ========================================================================== */
+
+:root {
+  /* ── Brand (WCAG AA verified) ── */
+  --ely-brand-primary: #DC2626;
+  --ely-brand-primary-hover: #B91C1C;
+  --ely-brand-primary-active: #991B1B;
+  --ely-brand-primary-fg: #FFFFFF;
+  --ely-brand-soft: rgba(220, 38, 38, 0.10);
+  --ely-brand-soft-strong: rgba(220, 38, 38, 0.18);
+  --ely-brand-gradient: linear-gradient(135deg, #EF4444 0%, #7F1D1D 100%);
+
+  /* ── Neutral / Surface ── */
+  --ely-bg-primary: #FFFFFF;
+  --ely-bg-surface: #FAFAFA;
+  --ely-bg-elevated: #FFFFFF;
+  --ely-border-default: #E4E4E7;
+  --ely-border-soft: rgba(10, 10, 10, 0.08);
+  --ely-text-primary: #0A0A0A;
+  --ely-text-muted: #52525B;
+  --ely-text-inverse: #FFFFFF;
+
+  /* ── Status ── */
+  --ely-success: #166534;
+  --ely-success-soft: rgba(21, 128, 61, 0.10);
+  --ely-warning: #B45309;
+  --ely-warning-soft: rgba(180, 83, 9, 0.10);
+  --ely-error: #DC2626;
+  --ely-error-soft: rgba(220, 38, 38, 0.10);
+  --ely-info: #1D4ED8;
+  --ely-info-soft: rgba(29, 78, 216, 0.10);
+
+  /* ── Typography ── */
+  --ely-font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ely-font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ely-font-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --ely-text-xs: clamp(0.7rem, 1.5vw, 0.75rem);
+  --ely-text-sm: clamp(0.8rem, 1.8vw, 0.875rem);
+  --ely-text-base: clamp(0.9rem, 2vw, 1rem);
+  --ely-text-lg: clamp(1rem, 2.2vw, 1.125rem);
+  --ely-text-xl: clamp(1.1rem, 2.5vw, 1.25rem);
+  --ely-text-2xl: clamp(1.3rem, 3vw, 1.5rem);
+  --ely-text-3xl: clamp(1.6rem, 4vw, 1.875rem);
+  --ely-text-4xl: clamp(2rem, 5vw, 2.25rem);
+  --ely-text-hero: clamp(2.5rem, 6vw, 3.75rem);
+
+  --ely-line-height-tight: 1.15;
+  --ely-line-height-base: 1.6;
+
+  /* ── Spacing ── */
+  --ely-space-1: 4px;
+  --ely-space-2: 8px;
+  --ely-space-3: 12px;
+  --ely-space-4: 16px;
+  --ely-space-5: 20px;
+  --ely-space-6: 24px;
+  --ely-space-8: 32px;
+  --ely-space-10: 40px;
+  --ely-space-12: 48px;
+  --ely-space-16: 64px;
+  --ely-space-20: 80px;
+
+  /* ── Radius ── */
+  --ely-radius-input: 8px;
+  --ely-radius-button: 50px;
+  --ely-radius-card: 12px;
+  --ely-radius-pill: 999px;
+  --ely-radius-sm: 8px;
+  --ely-radius-md: 12px;
+  --ely-radius-lg: 16px;
+  --ely-radius-xl: 24px;
+  --ely-radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --ely-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --ely-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.06);
+  --ely-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.14), 0 4px 12px rgba(0, 0, 0, 0.08);
+  --ely-shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.18);
+  --ely-shadow-card: 0 1px 2px rgba(10, 10, 10, 0.04), 0 8px 24px rgba(10, 10, 10, 0.06);
+  --ely-shadow-pop: 0 4px 12px rgba(10, 10, 10, 0.08), 0 16px 40px rgba(10, 10, 10, 0.14);
+
+  /* ── Layout ── */
+  --ely-nav-h: 64px;
+  --ely-bottom-nav-h: 64px;
+  --ely-sidebar-w: 260px;
+  --ely-max-content: 1280px;
+  --ely-max-wide: 1536px;
+  --ely-touch-min: 44px;
+
+  /* ── Focus / Disabled ── */
+  --ely-focus-ring: 2px solid var(--ely-brand-primary);
+  --ely-focus-offset: 2px;
+  --ely-disabled-opacity: 0.5;
+  --ely-disabled-cursor: not-allowed;
+
+  /* ── z-index ── */
+  --ely-z-content: 1;
+  --ely-z-sticky: 20;
+  --ely-z-dock: 40;
+  --ely-z-sheet: 60;
+  --ely-z-modal: 100;
+  --ely-z-toast: 110;
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"],
+.dark {
+  --ely-brand-primary: #EF4444;
+  --ely-brand-primary-hover: #F87171;
+  --ely-brand-primary-active: #DC2626;
+  --ely-brand-primary-fg: #FFFFFF;
+  --ely-brand-soft: rgba(239, 68, 68, 0.12);
+  --ely-brand-soft-strong: rgba(239, 68, 68, 0.20);
+
+  --ely-bg-primary: #09090B;
+  --ely-bg-surface: #131316;
+  --ely-bg-elevated: #1B1B1F;
+  --ely-border-default: #27272A;
+  --ely-border-soft: rgba(255, 255, 255, 0.08);
+  --ely-text-primary: #FAFAFA;
+  --ely-text-muted: #A1A1AA;
+  --ely-text-inverse: #09090B;
+
+  --ely-success: #22C55E;
+  --ely-success-soft: rgba(34, 197, 94, 0.12);
+  --ely-warning: #F59E0B;
+  --ely-warning-soft: rgba(245, 158, 11, 0.12);
+  --ely-error: #EF4444;
+  --ely-error-soft: rgba(239, 68, 68, 0.12);
+  --ely-info: #3B82F6;
+  --ely-info-soft: rgba(59, 130, 246, 0.12);
+
+  --ely-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+  --ely-shadow-pop: 0 4px 12px rgba(0, 0, 0, 0.5), 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Bootstrap 5 Variable Mapping ── */
+/* Map canonical tokens to Bootstrap variables so existing Sneat Pro
+   components consume the design system without modification. */
+:root {
+  --bs-primary: var(--ely-brand-primary);
+  --bs-danger: var(--ely-error);
+  --bs-success: var(--ely-success);
+  --bs-warning: var(--ely-warning);
+  --bs-info: var(--ely-info);
+  --bs-body-bg: var(--ely-bg-primary);
+  --bs-body-color: var(--ely-text-primary);
+  --bs-card-bg: var(--ely-bg-primary);
+  --bs-card-border-color: var(--ely-border-default);
+  --bs-input-bg: var(--ely-bg-primary);
+  --bs-input-border-color: var(--ely-border-default);
+  --bs-btn-primary-bg: var(--ely-brand-primary);
+  --bs-btn-primary-border: var(--ely-brand-primary);
+  --bs-navbar-bg: var(--ely-bg-primary);
+  --bs-navbar-color: var(--ely-text-primary);
+  --bs-sidebar-width: var(--ely-sidebar-w);
+  --bs-navbar-height: var(--ely-nav-h);
+}
+
+[data-theme="dark"] {
+  --bs-body-bg: var(--ely-bg-primary);
+  --bs-body-color: var(--ely-text-primary);
+  --bs-card-bg: var(--ely-bg-primary);
+  --bs-card-border-color: var(--ely-border-default);
+  --bs-input-bg: var(--ely-bg-primary);
+  --bs-input-border-color: var(--ely-border-default);
+  --bs-navbar-bg: var(--ely-bg-primary);
+  --bs-navbar-color: var(--ely-text-primary);
+}
+
+/* ── Accessibility / Utility ── */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: clip;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+button,
+a,
+input,
+select,
+textarea,
+label,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+:where(a, button, [role="button"], input, select, textarea):focus-visible:not([class*="focus-visible:ring"]) {
+  outline: var(--ely-focus-ring);
+  outline-offset: var(--ely-focus-offset);
+  border-radius: 4px;
+}
+
+:disabled {
+  opacity: var(--ely-disabled-opacity);
+  cursor: var(--ely-disabled-cursor);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Touch Targets ── */
+@media (max-width: 640px) {
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea,
+  a {
+    min-height: var(--ely-touch-min);
+  }
+
+  button.size-icon,
+  [data-size="icon"] {
+    min-width: var(--ely-touch-min);
+    min-height: var(--ely-touch-min);
+  }
+}
+
+/* ── Safe Area ── */
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pb-safe-4 {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.pb-safe-6 {
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+}
+
+.has-bottom-nav {
+  padding-bottom: max(6rem, calc(5rem + env(safe-area-inset-bottom)));
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" aria-label="Boarding pass placeholder">
+  <defs>
+    <linearGradient id="passGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F4F4F5"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="14" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Pass card -->
+    <rect x="50" y="40" width="300" height="220" fill="url(#passGrad)" stroke="#E4E4E7" stroke-width="2" rx="20"/>
+    <!-- Header -->
+    <rect x="50" y="40" width="300" height="56" fill="#DC2626" rx="20 20 0 0"/>
+    <text x="90" y="72" font-family="system-ui" font-size="16" font-weight="800" fill="#FFFFFF">BOARDING PASS</text>
+    <text x="310" y="72" font-family="system-ui" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="end">CONFIRMED</text>
+    <!-- Perforation -->
+    <path d="M50 96 L90 96 M310 96 L350 96" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+    <!-- Content -->
+    <text x="90" y="132" font-family="system-ui" font-size="15" font-weight="700" fill="#0A0A0A">Dakar &rarr; Bamako</text>
+    <text x="90" y="156" font-family="system-ui" font-size="13" fill="#52525B">Dec 15, 2026 &bull; 09:30</text>
+    <text x="90" y="180" font-family="system-ui" font-size="13" fill="#52525B">Seat 14A &bull; Express</text>
+    <line x1="90" y1="200" x2="310" y2="200" stroke="#E4E4E7" stroke-width="1"/>
+    <text x="90" y="224" font-family="system-ui" font-size="14" font-weight="700" fill="#DC2626">XAF 12,500</text>
+    <text x="310" y="224" font-family="system-ui" font-size="12" fill="#52525B" text-anchor="end">ELB-8821</text>
+    <!-- QR -->
+    <g transform="translate(260 132)">
+      <rect x="0" y="0" width="56" height="56" fill="#DC2626" rx="8"/>
+      <rect x="8" y="8" width="10" height="10" fill="#FFFFFF"/>
+      <rect x="38" y="8" width="10" height="10" fill="#FFFFFF"/>
+      <rect x="8" y="38" width="10" height="10" fill="#FFFFFF"/>
+      <rect x="38" y="38" width="10" height="10" fill="#FFFFFF"/>
+    </g>
+    <!-- Perforation bottom -->
+    <path d="M50 260 L90 260 M310 260 L350 260" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+  </g>
+</svg>

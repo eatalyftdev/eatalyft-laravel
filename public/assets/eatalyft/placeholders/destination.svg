@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" aria-label="Destination image placeholder">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0E7FF"/>
+      <stop offset="100%" stop-color="#C7D2FE"/>
+    </linearGradient>
+    <linearGradient id="landGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D1D5DB"/>
+      <stop offset="100%" stop-color="#E5E7EB"/>
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9CA3AF"/>
+      <stop offset="100%" stop-color="#6B7280"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="400" height="120" fill="url(#skyGrad)"/>
+  <!-- Sun -->
+  <circle cx="340" cy="40" r="20" fill="#FCD34D" opacity="0.9"/>
+  <!-- Land -->
+  <rect y="120" width="400" height="180" fill="url(#landGrad)"/>
+  <!-- Road -->
+  <path d="M0 180 Q200 220 400 180 L400 300 L0 300 Z" fill="url(#roadGrad)"/>
+  <!-- Road divider -->
+  <path d="M0 240 Q200 260 400 240" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="20 20" opacity="0.7"/>
+  <!-- Trees -->
+  <g fill="#166534">
+    <circle cx="60" cy="130" r="14"/>
+    <circle cx="100" cy="125" r="16"/>
+    <circle cx="140" cy="135" r="12"/>
+    <circle cx="260" cy="128" r="15"/>
+    <circle cx="300" cy="132" r="13"/>
+    <circle cx="340" cy="126" r="14"/>
+  </g>
+  <!-- Tree trunks -->
+  <g stroke="#3F3F46" stroke-width="3" stroke-linecap="round">
+    <line x1="60" y1="144" x2="60" y2="152"/>
+    <line x1="100" y1="141" x2="100" y2="150"/>
+    <line x1="140" y1="147" x2="140" y2="156"/>
+    <line x1="260" y1="143" x2="260" y2="152"/>
+    <line x1="300" y1="145" x2="300" y2="154"/>
+    <line x1="340" y1="140" x2="340" y2="149"/>
+  </g>
+  <!-- Distant mountains -->
+  <path d="M0 120 L80 60 L160 120 L240 70 L320 120 L400 80 L400 120 Z" fill="#E5E7EB" opacity="0.6"/>
+</svg>

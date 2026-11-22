@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" aria-label="Decorative top shape">
+  <defs>
+    <linearGradient id="decGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#DC2626" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#EF4444" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#B91C1C" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M0 120 Q150 40 300 120 Q450 200 600 120 Q750 40 900 120 Q1050 200 1200 120 V0 H0 Z" fill="url(#decGrad1)"/>
+</svg>

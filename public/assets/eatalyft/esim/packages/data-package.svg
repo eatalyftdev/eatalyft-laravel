@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" aria-label="Data package placeholder">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F4F4F5"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="14" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Card -->
+    <rect x="50" y="40" width="300" height="220" fill="url(#cardGrad)" stroke="#E4E4E7" stroke-width="2" rx="20"/>
+    <!-- Header -->
+    <rect x="50" y="40" width="300" height="56" fill="#166534" rx="20 20 0 0"/>
+    <text x="90" y="70" font-family="system-ui" font-size="16" font-weight="800" fill="#FFFFFF">DATA PACKAGE</text>
+    <text x="310" y="70" font-family="system-ui" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="end">ACTIVE</text>
+    <!-- Content -->
+    <text x="90" y="130" font-family="system-ui" font-size="32" font-weight="800" fill="#1F2933">5GB</text>
+    <text x="90" y="156" font-family="system-ui" font-size="14" fill="#52525B">30 days validity</text>
+    <line x1="90" y1="175" x2="310" y2="175" stroke="#E4E4E7" stroke-width="1"/>
+    <text x="90" y="200" font-family="system-ui" font-size="14" font-weight="700" fill="#166534">XAF 2,500</text>
+    <text x="310" y="200" font-family="system-ui" font-size="12" fill="#52525B" text-anchor="end">Valid until Dec 15</text>
+    <!-- Checkmarks -->
+    <g fill="#166534">
+      <path d="M90 230 l4 4 l10 -10" stroke="#166534" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M110 230 l4 4 l10 -10" stroke="#166534" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M130 230 l4 4 l10 -10" stroke="#166534" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="105" y="242" font-family="system-ui" font-size="11" fill="#52525B">4G/5G</text>
+    <text x="125" y="242" font-family="system-ui" font-size="11" fill="#52525B">Hotspot</text>
+    <text x="155" y="242" font-family="system-ui" font-size="11" fill="#52525B">Roaming</text>
+  </g>
+</svg>

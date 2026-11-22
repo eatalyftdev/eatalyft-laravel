@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" aria-label="Passenger seats placeholder">
+  <defs>
+    <linearGradient id="seatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5F5F4"/>
+      <stop offset="100%" stop-color="#E7E5E4"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="600" height="400" fill="#F4F4F5"/>
+  <!-- Seat A (available) -->
+  <g>
+    <rect x="50" y="120" width="90" height="120" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="70" y="120" width="40" height="25" fill="#DC2626" rx="4"/>
+    <rect x="55" y="150" width="20" height="5" fill="#E4E4E7" rx="2"/>
+    <rect x="85" y="150" width="20" height="5" fill="#E4E4E7" rx="2"/>
+    <text x="95" y="170" font-family="system-ui" font-size="12" fill="#52525B">14A</text>
+  </g>
+  <!-- Seat B (available) -->
+  <g>
+    <rect x="170" y="120" width="90" height="120" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="190" y="120" width="40" height="25" fill="#DC2626" rx="4"/>
+    <rect x="175" y="150" width="20" height="5" fill="#E4E4E7" rx="2"/>
+    <rect x="205" y="150" width="20" height="5" fill="#E4E4E7" rx="2"/>
+    <text x="215" y="170" font-family="system-ui" font-size="12" fill="#52525B">14B</text>
+  </g>
+  <!-- Seat C (held - different color) -->
+  <g>
+    <rect x="290" y="120" width="90" height="120" fill="#EF4444" stroke="#B91C1C" stroke-width="2" rx="8" opacity="0.9"/>
+    <rect x="310" y="120" width="40" height="25" fill="#FFFFFF" rx="4"/>
+    <rect x="295" y="150" width="20" height="5" fill="#B91C1C" rx="2"/>
+    <rect x="325" y="150" width="20" height="5" fill="#B91C1C" rx="2"/>
+    <text x="335" y="170" font-family="system-ui" font-size="12" fill="#FFFFFF">14C</text>
+    <text x="295" y="200" font-family="system-ui" font-size="11" fill="#B91C1C" font-weight="700">HELD</text>
+  </g>
+  <!-- Seat D (available) -->
+  <g>
+    <rect x="410" y="120" width="90" height="120" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="430" y="120" width="40" height="25" fill="#DC2626" rx="4"/>
+    <rect x="415" y="150" width="20" height="5" fill="#E4E4E7" rx="2"/>
+    <rect x="445" y="150" width="20" height="5" fill="#E4E4E7" rx="2"/>
+    <text x="455" y="170" font-family="system-ui" font-size="12" fill="#52525B">14D</text>
+  </g>
+  <!-- Seat E (available) -->
+  <g>
+    <rect x="530" y="120" width="90" height="120" fill="url(#seatGrad)" stroke="#E4E4E7" stroke-width="2" rx="8"/>
+    <rect x="550" y="120" width="40" height="25" fill="#DC2626" rx="4"/>
+    <rect x="535" y="150" width="20" height="5" fill="#E4E4E7" rx="2"/>
+    <rect x="565" y="150" width="20" height="5" fill="#E4E4E7" rx="2"/>
+    <text x="575" y="170" font-family="system-ui" font-size="12" fill="#52525B">14E</text>
+  </g>
+  <!-- Aisle divider -->
+  <path d="M285 120 L285 240" stroke="#E4E4E7" stroke-width="2" stroke-dasharray="8 8"/>
+</svg>

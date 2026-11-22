@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" aria-label="Hero background placeholder">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090B"/>
+      <stop offset="100%" stop-color="#18181B"/>
+    </linearGradient>
+    <linearGradient id="overlayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#B91C1C" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#heroGrad)"/>
+  <!-- Overlay -->
+  <rect width="1920" height="1080" fill="url(#overlayGrad)"/>
+  <!-- Decorative geometric shapes -->
+  <circle cx="1700" cy="200" r="200" fill="#DC2626" opacity="0.15"/>
+  <circle cx="200" cy="900" r="250" fill="#DC2626" opacity="0.08"/>
+  <path d="M960 0 Q1440 600 960 1080 Q480 480 960 0 Z" fill="#DC2626" opacity="0.06"/>
+</svg>
