@@ -83,7 +83,7 @@ class PaymentController extends Controller
             // Notify customer of ticket issuance
             $this->notificationService->ticketIssued($ticket);
 
-            return redirect()->route('bus.bookings.show', $booking)
+            return redirect()->route('bus.bookings.show', $booking);
         } catch (\Throwable $e) {
             \Log::error('Payment processing failed', [
                 'booking_id' => $booking->id,

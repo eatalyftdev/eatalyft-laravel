@@ -28,7 +28,21 @@ use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
-Route::get('/search', [PublicController::class, 'search'])->name('search');
+Route::get('/legacy-home', [PublicController::class, 'legacyHome'])->name('legacy.home');
+
+// Inertia React Auth Portals
+Route::get('/user/login', [\App\Http\Controllers\Inertia\RoleAuthController::class, 'customerLogin'])->name('user.login');
+Route::get('/user/signup', [\App\Http\Controllers\Inertia\RoleAuthController::class, 'customerSignup'])->name('user.signup');
+Route::get('/agency/login', [\App\Http\Controllers\Inertia\RoleAuthController::class, 'agencyLogin'])->name('agency.login');
+Route::get('/agency/signup', [\App\Http\Controllers\Inertia\RoleAuthController::class, 'agencySignup'])->name('agency.signup');
+Route::get('/agent/login', [\App\Http\Controllers\Inertia\RoleAuthController::class, 'stationAgentLogin'])->name('agent.login');
+Route::get('/signup/agency/join', [\App\Http\Controllers\Inertia\RoleAuthController::class, 'agencyInviteJoin'])->name('agency.invite.join');
+Route::get('/handyman/login', [\App\Http\Controllers\Inertia\RoleAuthController::class, 'handymanLogin'])->name('handyman.login');
+Route::get('/handyman/signup', [\App\Http\Controllers\Inertia\RoleAuthController::class, 'handymanSignup'])->name('handyman.signup');
+Route::get('/admin/vault', [\App\Http\Controllers\Inertia\RoleAuthController::class, 'adminVault'])->name('admin.vault');
+Route::get('/customer/dashboard', function () { return \Inertia\Inertia::render('CustomerDashboard'); })->name('customer.dashboard');
+Route::get('/agency/dashboard', function () { return \Inertia\Inertia::render('AgencyDashboard'); })->name('agency.dashboard');
+Route::get('/station/dashboard', function () { return \Inertia\Inertia::render('StationDashboard'); })->name('station.dashboard');
 
 Route::get('/bus/search', [PublicController::class, 'busSearch'])->name('bus.search');
 Route::get('/bus/trips/{trip}', [PublicController::class, 'busTripShow'])->name('bus.trip.show');

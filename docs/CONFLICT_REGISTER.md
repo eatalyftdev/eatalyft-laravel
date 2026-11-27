@@ -3,7 +3,7 @@
 **Version:** 1.0  
 **Date:** 2026-11-22  
 **Status:** Complete  
-**Total Conflicts:** 18 (9 resolved, 9 pending approval)
+**Total Conflicts:** 25 (9 resolved, 16 pending approval)
 
 ---
 
@@ -35,7 +35,13 @@
 | 15 | **Legacy Studio Components Migration** | Studio has rich React components (Hero, Bento, RateCalculator, etc.) that could be ported. | **A)** Port all marketing components<br>**B)** Only port design tokens; rebuild Blade components<br>**C)** Keep Studio as reference; build fresh in Laravel | **B** — Blade components needed; Studio React components not directly portable | Lead Architect | Week 2 |
 | 16 | **Duplicate API User Endpoints** | `/api/v1/user` (closure) and `/api/v1/auth/me` (AuthController) return same data. | **A)** Remove `/api/v1/user`<br>**B)** Keep both as alias<br>**C)** Redirect `/api/v1/user` to `/api/v1/auth/me` | **B** — Keep as alias for backward compatibility | Lead Architect | Week 1 |
 | 17 | **Test Database Isolation** | PHPUnit uses `eatalyft_testing` but `.env.example` shows `eatalyft_dev`. Risk of running tests against dev database. | **A)** Keep current guard in TestCase.php<br>**B)** Add CI check to fail if testing against dev DB<br>**C)** Both A and B | **C** — Defense in depth | DevOps | Week 1 |
-| 18 | **Bus Module Policy Coverage** | Only BusBookingPolicy and BusTicketPolicy exist. BusRoute, BusTrip, BusTripSeat lack policies. | **A)** Add policies for all bus models<br>**B)** Keep current policies; add later<br>**C)** Use middleware-only authorization | **A** — Consistent with RBAC architecture | Backend Eng | Week 2 |
+| 19 | **User model lacks agency/branch scoping** | `BusBookingPolicy` references `$user->agency_id` and `$user->branch_id` but these columns don't exist on `users` table | **A)** Add `agency_id` and `branch_id` columns to users<br>**B)** Use separate staff assignment table<br>**C)** Store on role pivot | **A** — Simplest; aligns with existing patterns | Backend Eng | Phase 07B |
+| 20 | **Agency model lacks branding fields** | Phase 07 requires agency logo, colors, support info but `agencies` table only has `logo_url` | **A)** Add branding columns to agencies<br>**B)** Separate branding table<br>**C)** Store in JSON | **A** — Direct columns for queryability | Backend Eng | Phase 07B |
+| 21 | **No financial system exists** | No wallet, ledger, or charge tracking; `BusBooking.total_minor` is the only financial field | **A)** Build full double-entry ledger<br>**B)** Simple wallet with balance column<br>**C)** Defer financial tracking | **A** — Required for auditability and correctness | Backend Eng | Phase 07C |
+| 22 | **No notification delivery** | `BookingNotificationService` only logs; no email/WhatsApp delivery | **A)** Implement real providers now<br>**B)** Keep logging until credentials available<br>**C)** Defer to separate phase | **A** — Implement abstractions; configure when credentials available | Backend Eng | Phase 07E |
+| 23 | **Seat layout not flexible** | `seat_layouts` has basic rows/cols; no seat types, pricing modifiers, or templates | **A)** Extend existing tables<br>**B)** Create new layout system<br>**C)** Keep current basic layout | **A** — Extend existing; avoid duplication | Backend Eng | Phase 07F |
+| 24 | **No QR code generation** | `bus_tickets.qr_token_hash` stores hash but no QR image rendering | **A)** Install QR library and render images<br>**B)** Generate on-demand via API<br>**C)** Use external service | **A** — Self-contained; no external dependency | Backend Eng | Phase 07G |
+| 25 | **No 30-min cancellation enforcement** | `cancel()` method has no time window check | **A)** Add `confirmed_at` + `cancellation_deadline` columns<br>**B)** Calculate from `created_at`<br>**C)** Store deadline in metadata | **A** — Explicit columns for clarity and indexing | Backend Eng | Phase 07H |
 
 ---
 

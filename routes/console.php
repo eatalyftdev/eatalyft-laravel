@@ -10,3 +10,6 @@ Artisan::command('inspire', function () {
 
 // Release abandoned bus seat holds every minute; safe to run more than once.
 Schedule::command('bus:expire-seat-holds')->everyMinute()->withoutOverlapping();
+
+// Send departure reminders every 5 minutes.
+Schedule::command('bus:send-departure-reminders')->everyFiveMinutes()->withoutOverlapping();

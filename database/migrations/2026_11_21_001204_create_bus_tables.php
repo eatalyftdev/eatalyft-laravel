@@ -4,14 +4,12 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void {
-        Schema::create('cities', function (Blueprint $t) {
-            $t->id(); $t->string('name_en'); $t->string('name_fr'); $t->string('region')->nullable(); $t->string('country',2)->default('CM'); $t->timestamps();
-        });
+        // cities table is created by 2026_11_26_223709_create_cities_table migration
         Schema::create('bus_classes', function (Blueprint $t) { $t->id(); $t->string('name'); $t->string('code')->unique(); $t->timestamps(); });
         Schema::create('amenities', function (Blueprint $t) { $t->id(); $t->string('name'); $t->string('icon')->nullable(); $t->timestamps(); });
         Schema::create('branches', function (Blueprint $t) {
             $t->id(); $t->foreignId('agency_id')->constrained()->cascadeOnDelete();
-            $t->foreignId('city_id')->constrained()->cascadeOnDelete();
+            $t->foreignId('city_id');
             $t->string('name'); $t->enum('type',['office','terminal'])->default('office');
             $t->string('phone')->nullable(); $t->enum('status',['active','inactive'])->default('active');
             $t->timestamps();

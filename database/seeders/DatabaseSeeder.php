@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             RolesAndPermissionsSeeder::class,
             AppSettingsSeeder::class,
             AdminUserSeeder::class,
+            CameroonCitiesSeeder::class,
         ]);
 
         User::factory()->create([

@@ -6,28 +6,36 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\View\View;
+use Illuminate\Validation\ValidationException;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class ConfirmablePasswordController extends Controller
 {
-    public function show(): View
+    /**
+     * Show the confirm password view.
+     */
+    public function show(): Response
     {
-        return view('auth.confirm-password');
+        return Inertia::render('Auth/ConfirmPassword');
     }
 
+    /**
+     * Confirm the user's password.
+     */
     public function store(Request $request): RedirectResponse
     {
         if (! Auth::guard('web')->validate([
             'email' => $request->user()->email,
             'password' => $request->password,
         ])) {
-            return back()->withErrors([
-                'password' => __('The provided password does not match our records.'),
+            throw ValidationException::withMessages([
+                'password' => __('auth.password'),
             ]);
         }
 
         $request->session()->put('auth.password_confirmed_at', time());
 
-        return redirect()->intended();
+        return redirect()->intended(route('dashboard', absolute: false));
     }
 }
