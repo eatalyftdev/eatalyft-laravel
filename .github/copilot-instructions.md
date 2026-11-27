@@ -199,3 +199,14 @@ All field names, Zod rules, enum values, and seat-grid arrays MUST match the mig
 - Never expose secrets or credentials in code or commits
 - Preserve existing uncommitted changes — inspect `git status` before and after work
 - Commit messages: conventional commits (`feat:`, `fix:`, `docs:`, `chore:`)
+
+## Unslop Workflow (Mandatory for ALL UI)
+
+Every new or modified page, component, modal, ticket, or dashboard MUST undergo the unslop workflow before task completion:
+1. Audit: Identify AI-UI tells (generic pills, symmetrical grids, vague copy, over-rounded cards, blobs)
+2. Direction: Define aesthetic direction (Swiss-precision transit & fintech for Cameroon)
+3. 9 Ordered Passes: spacing, color, icons, copy, typography, layout, details, motion, final
+4. Eliminate ALL AI tells before completion
+
+Reference: .claude/skills/unslop/SKILL.md
+
