@@ -4,18 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class City extends Model
 {
-    protected $fillable = ['name_en', 'name_fr', 'region', 'country'];
+    protected $fillable = ['country_code', 'name', 'slug', 'code', 'is_enabled'];
 
-    public function getNameAttribute(): string
+    protected $casts = ['is_enabled' => 'boolean'];
+
+    public function country(): BelongsTo
     {
-        return app()->getLocale() === 'fr' ? $this->name_fr : $this->name_en;
+        return $this->belongsTo(Country::class, 'country_code', 'code');
     }
 
-    public function agencies(): HasMany
+    public function neighborhoods(): HasMany
     {
-        return $this->hasMany(Agency::class);
+        return $this->hasMany(Neighborhood::class);
+    }
+
+    public function busStations(): HasMany
+    {
+        return $this->hasMany(BusStation::class);
     }
 }

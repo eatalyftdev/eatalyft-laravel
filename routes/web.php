@@ -28,6 +28,7 @@ use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
+Route::get('/legacy-home', [PublicController::class, 'legacyHome'])->name('legacy.home');
 Route::get('/search', [PublicController::class, 'search'])->name('search');
 
 Route::get('/bus/search', [PublicController::class, 'busSearch'])->name('bus.search');

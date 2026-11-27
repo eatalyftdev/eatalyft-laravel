@@ -18,8 +18,8 @@
 | 04 | Service Discovery & Multi-Role Authentication | Multi-service homepage, customer/provider/agency registration, admin login | ✅ Complete | Phase 03 |
 | 05 | Centralized Error Monitoring & Notification | Error incident tracking, Firebase mobile auth | ✅ Complete | Phase 04 |
 | 06 | Bus Booking & Customer Dashboard | Bus routes, trips, seats, bookings, tickets, customer dashboard, agency operations | ✅ Complete | Phase 05 |
-| 07 | Mobile Application | Expo/React Native + Firebase Auth | Planned | Phase 06 |
-| 08 | Production Readiness | Performance, security, monitoring | Planned | Phase 07 |
+| 07 | Agency Management, Financial Ledger & Notifications | Agency hierarchy, wallet, ledger, charges, withdrawals, email/WhatsApp, seat maps, branded tickets, 30-min cancellation | 🔄 In Progress | Phase 06 |
+| 08 | Mobile Application | Expo/React Native + Firebase Auth | Planned | Phase 07 |
 
 ---
 

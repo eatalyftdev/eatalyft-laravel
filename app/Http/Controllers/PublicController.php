@@ -16,6 +16,22 @@ class PublicController extends Controller
 {
     public function home()
     {
+        $cities = \App\Models\City::where('is_enabled', true)->get();
+        $corridors = [
+            ['from' => 'Douala', 'to' => 'Yaoundé', 'fare' => 5000],
+            ['from' => 'Yaoundé', 'to' => 'Bamenda', 'fare' => 6000],
+            ['from' => 'Douala', 'to' => 'Bafoussam', 'fare' => 4500],
+        ];
+
+        return \Inertia\Inertia::render('Welcome', [
+            'cities' => $cities,
+            'corridors' => $corridors,
+            'zigoDispatchUrl' => config('services.zigo.dispatch_url', env('ZIGO_DISPATCH_URL', '')),
+        ]);
+    }
+
+    public function legacyHome()
+    {
         $partners = Partner::where('is_active', true)
             ->orderBy('sort_order')
             ->get();
